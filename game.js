@@ -14,10 +14,10 @@ const playerName = document.querySelector('#playerName');
 const saveScoreBtn = document.querySelector('#saveScore');
 let cards=[], first=null, lock=false, seconds=60, score=0, matches=0, timer=null, playing=false;
 const members = [
-  { name: '朴星垠', photo: 'photos/member-01.jpg' }, { name: '李珠珢', photo: 'photos/member-02.png' },
-  { name: '李晧禎', photo: 'photos/member-03.jpg' }, { name: '李雅英', photo: 'photos/member-04.png' },
-  { name: '南珉貞', photo: 'photos/member-05.png' }, { name: '慈妹', photo: 'photos/member-06.png' },
-  { name: '潔潔', photo: 'photos/member-07.png' }, { name: '檸檬', photo: 'photos/member-08.png' }
+  { name: '朴星垠', photo: 'member-01.jpg' }, { name: '李珠珢', photo: 'member-02.png' },
+  { name: '李晧禎', photo: 'member-03.jpg' }, { name: '李雅英', photo: 'member-04.png' },
+  { name: '南珉貞', photo: 'member-05.png' }, { name: '慈妹', photo: 'member-06.png' },
+  { name: '潔潔', photo: 'member-07.png' }, { name: '檸檬', photo: 'member-08.png' }
 ];
 
 function shuffle(a){ return [...a].sort(()=>Math.random()-.5); }
