@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cheer Match! 啦啦隊記憶挑戰</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="hero">
+      <p class="eyebrow">CHEERLEADER EDITION</p>
+      <h1>Cheer Match!</h1>
+      <p class="subtitle">在時間內找出所有啦啦隊女孩</p>
+    </section>
+
+    <section class="dashboard" aria-label="遊戲狀態">
+      <div><span>剩餘時間</span><strong id="time">60</strong><small>秒</small></div>
+      <div><span>已配對</span><strong id="matches">0</strong><small>/ 8</small></div>
+      <div><span>分數</span><strong id="score">0</strong></div>
+    </section>
+
+    <div class="progress-track" aria-hidden="true"><div id="progress"></div></div>
+    <button id="start" class="primary">開始挑戰</button>
+    <p id="hint" class="hint">按下開始，記住每位成員的位置！</p>
+    <section id="board" class="board" aria-label="翻牌遊戲區"></section>
+  </main>
+
+  <dialog id="resultDialog">
+    <div class="result-card">
+      <p id="resultEmoji" class="result-emoji">🎉</p>
+      <p class="eyebrow">CHALLENGE RESULT</p>
+      <h2 id="resultTitle">過關成功！</h2>
+      <p id="resultText"></p>
+      <div id="scoreEntry" class="score-entry">
+        <label>留下暱稱（選填）<input id="playerName" maxlength="12" placeholder="啦啦隊長" /></label>
+        <button id="saveScore" class="primary">送出成績</button>
+      </div>
+      <button id="playAgain" class="secondary">再玩一次</button>
+      <ol id="ranking" class="ranking"></ol>
+    </div>
+  </dialog>
+  <script src="game.js"></script>
+</body>
+</html>

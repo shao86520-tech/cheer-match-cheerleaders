@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Noto+Sans+TC:wght@500;700;900&display=swap');
+
+:root { --navy:#172b65; --pink:#ff5b9f; --lavender:#8876e7; --pale:#fff6fc; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; color:var(--navy); font-family:"Noto Sans TC",sans-serif; background:radial-gradient(circle at 10% 10%,#fff 0 8%,transparent 9%),linear-gradient(140deg,#ffe5f2,#eee9ff 53%,#def4ff); }
+.game-shell { width:min(920px,94vw); margin:auto; padding:30px 0 50px; text-align:center; }
+.hero h1 { font:800 clamp(3rem,9vw,5.4rem)/.9 "Baloo 2",sans-serif; margin:4px 0 10px; color:var(--pink); text-shadow:3px 4px 0 white,6px 7px 0 #d7caff; }
+.eyebrow { margin:0; letter-spacing:.16em; font-size:.76rem; font-weight:900; color:var(--lavender); }
+.subtitle,.hint { margin:0; font-weight:700; }.hint { min-height:30px; color:#59628b; }
+.dashboard { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:25px auto 10px; max-width:560px; }
+.dashboard div { padding:10px 5px; border:2px solid white; border-radius:18px; background:#ffffffaa; box-shadow:0 7px 18px #7a63b126; }
+.dashboard span,.dashboard small { display:block; font-size:.72rem; font-weight:700; }.dashboard strong { font:800 1.65rem "Baloo 2"; color:var(--pink); }.dashboard small { display:inline; }
+.progress-track { height:11px; max-width:560px; overflow:hidden; margin:0 auto 17px; border:2px solid white; border-radius:99px; background:#ffffff9e; }.progress-track div { height:100%; width:100%; background:linear-gradient(90deg,#ff62a7,#9e82ee); transition:width .3s; }
+button { border:0; cursor:pointer; font:800 1rem "Noto Sans TC"; }.primary,.secondary { border-radius:99px; padding:12px 27px; margin:0 4px 10px; }.primary { color:white; background:linear-gradient(135deg,#ff5b9f,#9a78e8); box-shadow:0 7px 0 #8e5bab,0 10px 17px #9b74ca66; }.primary:active { transform:translateY(4px); box-shadow:0 3px 0 #8e5bab; }.secondary { color:var(--navy); background:#f0eaff; }
+.board { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:14px auto 0; perspective:900px; }.card { aspect-ratio:1; padding:0; border-radius:18px; background:transparent; transform-style:preserve-3d; transition:transform .35s; }.card.flipped,.card.matched { transform:rotateY(180deg); }.face { position:absolute; inset:0; display:grid; place-items:center; overflow:hidden; border:3px solid white; border-radius:18px; backface-visibility:hidden; box-shadow:0 8px 15px #594a8c25; }.back { background:linear-gradient(135deg,#ff77b4,#897de7); color:white; font:800 clamp(1.4rem,5vw,2.4rem) "Baloo 2"; }.front { background:#fffdfd; transform:rotateY(180deg); }.member-photo { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.matched .front { border-color:#ffd55a; animation:pop .35s ease-out; }@keyframes pop {50%{scale:1.12}}
+dialog { border:0; padding:0; max-width:min(420px,90vw); border-radius:28px; background:transparent; box-shadow:0 15px 60px #24195f80; }dialog::backdrop{background:#25204b8c}.result-card { padding:28px; text-align:center; background:linear-gradient(150deg,#fff,#fff0fa); }.result-card h2{margin:5px}.result-emoji{margin:0;font-size:3rem}.result-card label{display:block;margin:16px auto 10px;font-weight:700}.result-card input{width:100%;margin-top:6px;padding:10px;border:2px solid #e2d7fa;border-radius:10px;font:inherit}.ranking{text-align:left;margin:14px 0 0;padding-left:28px}.ranking li{padding:4px;color:#555b7d}
+@media (max-width:480px){.game-shell{padding-top:22px}.board{gap:8px}.face{border-radius:13px}.card{border-radius:13px}.dashboard{gap:6px}.dashboard strong{font-size:1.35rem}}
